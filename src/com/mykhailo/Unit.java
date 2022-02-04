@@ -3,31 +3,26 @@ package com.mykhailo;
 public abstract class Unit {
 
     private Name name;
-    private boolean isImmortal;
-    private boolean canMove;
-    private boolean canFire;
-    private boolean canReload;
+    private boolean isBreakable;
 
-    protected Unit(Name name, boolean isImmortal, boolean canMove, boolean canFire, boolean canReload) {
+    protected Unit(Name name, boolean isBreakable) {
         this.name = name;
-        this.isImmortal = isImmortal;
-        this.canMove = canMove;
-        this.canFire = canFire;
-        this.canReload = canReload;
+        this.isBreakable = isBreakable;
     }
 
-    public Name getName() {
+    protected Name getName() {
         return name;
+    }
+
+    protected boolean getBreakable() {
+        return isBreakable;
     }
 
     @Override
     public String toString() {
         return "Unit{" +
                 "name=" + name +
-                ", isImmortal=" + isImmortal +
-                ", canMove=" + canMove +
-                ", canFire=" + canFire +
-                ", canReload=" + canReload +
+                ", isBreakable=" + isBreakable +
                 '}';
     }
 }
