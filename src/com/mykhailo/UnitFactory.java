@@ -10,19 +10,19 @@ public class UnitFactory {
     public static void main(String[] args) {
 
         UnitFactory game = new UnitFactory();
-        Wall wall = new Wall();
-        Tower tower = new Tower();
-        Soldier soldier = new Soldier();
-        Tank tank = new Tank();
+        Wall wall = new Wall(Name.WALL,true);
+        Tower tower = new Tower(Name.TOWER, false);
+        Soldier soldier = new Soldier(Name.SOLDIER, true,true,true);
+        Tank tank = new Tank(Name.TANK,true,true,true,true);
         game.unitList.add(wall);
         game.unitList.add(tower);
         game.unitList.add(soldier);
         game.unitList.add(tank);
-        game.unitArray = new Unit[10][10];
-        game.addUnitItemsToArray(game.unitArray);
-        game.printUnitNames(game.unitArray);
+        game.matrix = new Unit[10][10];
+        game.addUnitsToMatrix(game.matrix);
+        game.printUnitInfo(game.matrix);
         System.out.println();
-        game.printUnitItems(game.unitArray);
+        game.printUnitNames(game.matrix);
         System.out.println();
         soldier.move();
         soldier.fire();
@@ -34,9 +34,9 @@ public class UnitFactory {
 
     private ArrayList<Unit> unitList = new ArrayList<>();
 
-    private Unit[][] unitArray;
+    private Unit[][] matrix;
 
-    protected void addUnitItemsToArray(Unit[][] matrix) {
+    protected void addUnitsToMatrix(Unit[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = unitList.get(RANDOM.nextInt(unitList.size()));
@@ -44,7 +44,7 @@ public class UnitFactory {
         }
     }
 
-    protected void printUnitNames(Unit[][] matrix) {
+    protected void printUnitInfo(Unit[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 System.out.print(matrix[i][j] + " ");
@@ -53,16 +53,16 @@ public class UnitFactory {
         }
     }
 
-    protected void printUnitItems(Unit[][] matrix) {
+    protected void printUnitNames(Unit[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                if (unitArray[i][j].getName() == Name.WALL) {
+                if (this.matrix[i][j].getName() == Name.WALL) {
                     System.out.print("Wall     ");
-                } else if (unitArray[i][j].getName() == Name.TOWER) {
+                } else if (this.matrix[i][j].getName() == Name.TOWER) {
                     System.out.print("Tower    ");
-                } else if (unitArray[i][j].getName() == Name.SOLDIER) {
+                } else if (this.matrix[i][j].getName() == Name.SOLDIER) {
                     System.out.print("Soldier  ");
-                } else if (unitArray[i][j].getName() == Name.TANK) {
+                } else if (this.matrix[i][j].getName() == Name.TANK) {
                     System.out.print("Tank     ");
                 }
             }
