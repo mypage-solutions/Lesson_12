@@ -2,19 +2,38 @@ package com.mykhailo;
 
 public class Soldier extends Unit {
 
-    protected Soldier(Name name, boolean isImmortal, boolean canMove, boolean canFire, boolean canReload) {
-        super(name, isImmortal, canMove, canFire, canReload);
+    private boolean canMove;
+    private boolean canFire;
+
+    protected Soldier(Name name, boolean isBreakable, boolean canMove, boolean canFire) {
+        super(name, isBreakable);
+        this.canMove = canMove;
+        this.canFire = canFire;
     }
 
-    protected Soldier() {
-        super(Name.SOLDIER, true, true, true, false);
+    protected boolean getMove() {
+        return canMove;
+    }
+
+    protected boolean getFire() {
+        return canFire;
     }
 
     protected void move() {
-        System.out.println(Name.SOLDIER + " says, I can move!");
+        System.out.println("I can move!");
     }
 
     protected void fire() {
-        System.out.println(Name.SOLDIER + " says, I can fire!");
+        System.out.println("I can fire!");
+    }
+
+    @Override
+    public String toString() {
+        return "Unit{" +
+                "name=" + getName() +
+                ", isBreakable=" + getBreakable() +
+                ", canMove=" + canMove +
+                ", canFire=" + canFire +
+                '}';
     }
 }
