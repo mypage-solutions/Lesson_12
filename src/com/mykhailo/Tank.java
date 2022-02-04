@@ -2,21 +2,25 @@ package com.mykhailo;
 
 public class Tank extends Soldier {
 
-    protected Tank() {
-        super(Name.TANK, true, true, true, true);
+    private boolean canReload;
+
+    protected Tank(Name name, boolean isBreakable, boolean canMove, boolean canFire, boolean canReload) {
+        super(name, isBreakable, canMove, canFire);
+        this.canReload = canReload;
     }
 
     protected void reload() {
-        System.out.println(Name.TANK + " says, I can reload!");
+        System.out.println("I can reload!");
     }
 
     @Override
-    protected void move() {
-        System.out.println(Name.TANK + " says, I can move!");
-    }
-
-    @Override
-    protected void fire() {
-        System.out.println(Name.TANK + " says, I can fire!");
+    public String toString() {
+        return "Unit{" +
+                "name=" + getName() +
+                ", isBreakable=" + getBreakable() +
+                ", canMove=" + getMove() +
+                ", canFire=" + getFire() +
+                ", canReload=" + canReload +
+                '}';
     }
 }
