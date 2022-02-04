@@ -1,8 +1,8 @@
 package com.mykhailo;
 
-public class Tower extends Unit{
+public class Tower extends Unit {
 
-    protected Tower() {
-        super(Name.TOWER, true, false, false, false);
+    protected Tower(Name name, boolean isBreakable) {
+        super(name, isBreakable);
     }
 }
