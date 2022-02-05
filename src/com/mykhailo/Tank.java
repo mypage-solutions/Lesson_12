@@ -2,7 +2,7 @@ package com.mykhailo;
 
 public class Tank extends Soldier {
 
-    private boolean canReload;
+    private final boolean canReload;
 
     protected Tank(Name name, boolean isBreakable, boolean canMove, boolean canFire, boolean canReload) {
         super(name, isBreakable, canMove, canFire);
@@ -15,7 +15,7 @@ public class Tank extends Soldier {
 
     @Override
     public String toString() {
-        return "Unit{" +
+        return "Tank{" +
                 "name=" + getName() +
                 ", isBreakable=" + getBreakable() +
                 ", canMove=" + getMove() +

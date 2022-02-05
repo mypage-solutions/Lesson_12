@@ -2,8 +2,8 @@ package com.mykhailo;
 
 public class Soldier extends Unit {
 
-    private boolean canMove;
-    private boolean canFire;
+    private final boolean canMove;
+    private final boolean canFire;
 
     protected Soldier(Name name, boolean isBreakable, boolean canMove, boolean canFire) {
         super(name, isBreakable);
@@ -29,7 +29,7 @@ public class Soldier extends Unit {
 
     @Override
     public String toString() {
-        return "Unit{" +
+        return "Soldier{" +
                 "name=" + getName() +
                 ", isBreakable=" + getBreakable() +
                 ", canMove=" + canMove +
