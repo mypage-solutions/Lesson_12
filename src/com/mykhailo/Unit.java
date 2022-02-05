@@ -2,8 +2,8 @@ package com.mykhailo;
 
 public abstract class Unit {
 
-    private Name name;
-    private boolean isBreakable;
+    private final Name name;
+    private final boolean isBreakable;
 
     protected Unit(Name name, boolean isBreakable) {
         this.name = name;
@@ -16,13 +16,5 @@ public abstract class Unit {
 
     protected boolean getBreakable() {
         return isBreakable;
-    }
-
-    @Override
-    public String toString() {
-        return "Unit{" +
-                "name=" + name +
-                ", isBreakable=" + isBreakable +
-                '}';
     }
 }
