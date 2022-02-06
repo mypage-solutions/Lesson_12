@@ -10,11 +10,11 @@ public abstract class Unit {
         this.isBreakable = isBreakable;
     }
 
-    protected Name getName() {
+    public Name getName() {
         return name;
     }
 
-    protected boolean getBreakable() {
+    public boolean getBreakable() {
         return isBreakable;
     }
 }

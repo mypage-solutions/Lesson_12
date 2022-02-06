@@ -9,7 +9,7 @@ public class Tank extends Soldier {
         this.canReload = canReload;
     }
 
-    protected void reload() {
+    public void reload() {
         System.out.println("I can reload!");
     }
 

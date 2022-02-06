@@ -11,7 +11,7 @@ public class UnitFactory {
 
     private Unit[][] battlefield;
 
-    protected void addUnitsToBattlefield(Unit[][] matrix) {
+    public void addUnitsToBattlefield(Unit[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 matrix[i][j] = listOfUnits.get(RANDOM.nextInt(listOfUnits.size()));
@@ -19,7 +19,7 @@ public class UnitFactory {
         }
     }
 
-    protected void printUnitNamesOnBattlefield(Unit[][] matrix) {
+    public void printUnitNamesOnBattlefield(Unit[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (this.battlefield[i][j].getName() == Name.WALL) {

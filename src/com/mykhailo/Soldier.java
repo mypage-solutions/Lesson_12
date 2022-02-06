@@ -11,19 +11,19 @@ public class Soldier extends Unit {
         this.canFire = canFire;
     }
 
-    protected boolean getMove() {
+    public boolean getMove() {
         return canMove;
     }
 
-    protected boolean getFire() {
+    public boolean getFire() {
         return canFire;
     }
 
-    protected void move() {
+    public void move() {
         System.out.println("I can move!");
     }
 
-    protected void fire() {
+    public void fire() {
         System.out.println("I can fire!");
     }
 
