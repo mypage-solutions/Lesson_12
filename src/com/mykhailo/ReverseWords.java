@@ -10,14 +10,17 @@ public class ReverseWords {
 
     }
 
-    public static String reverseWords(String stringOfWords) {
+    public static String reverseWords(String sequenceOfWords) {
+        if (sequenceOfWords == null || sequenceOfWords.isEmpty()) {
+            return sequenceOfWords;
+        }
+        String[] words = sequenceOfWords.split("\\s+");
         StringBuilder result = new StringBuilder();
-        String[] words = stringOfWords.split("\\s+");
+        String temp;
         for (String word : words) {
-            String reverseWord = new StringBuilder(word).reverse().toString();
-            reverseWord = reverseWord.substring(0, 1).toUpperCase()
-                    + reverseWord.substring(1);
-            result.append(reverseWord).append(" ");
+            temp = word.substring(0, word.length() - 1) + word.substring(word.length() - 1).toUpperCase();
+            temp = new StringBuilder(temp).reverse().toString();
+            result.append(temp).append(" ");
         }
         return result.toString().trim();
     }
