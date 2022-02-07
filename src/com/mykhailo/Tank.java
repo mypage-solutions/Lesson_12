@@ -2,7 +2,7 @@ package com.mykhailo;
 
 public class Tank extends Soldier {
 
-    protected final boolean canReload;
+    protected boolean canReload;
 
     public Tank(Name name, boolean isBreakable, boolean canMove, boolean canFire, boolean canReload) {
         super(name, isBreakable, canMove, canFire);
