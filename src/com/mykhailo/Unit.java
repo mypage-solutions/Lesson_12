@@ -2,10 +2,10 @@ package com.mykhailo;
 
 public abstract class Unit {
 
-    private final Name name;
-    private final boolean isBreakable;
+    protected Name name;
+    protected boolean isBreakable;
 
-    protected Unit(Name name, boolean isBreakable) {
+    public Unit(Name name, boolean isBreakable) {
         this.name = name;
         this.isBreakable = isBreakable;
     }

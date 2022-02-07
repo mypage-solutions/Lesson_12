@@ -2,10 +2,10 @@ package com.mykhailo;
 
 public class Soldier extends Unit {
 
-    private final boolean canMove;
-    private final boolean canFire;
+    protected boolean canMove;
+    protected boolean canFire;
 
-    protected Soldier(Name name, boolean isBreakable, boolean canMove, boolean canFire) {
+    public Soldier(Name name, boolean isBreakable, boolean canMove, boolean canFire) {
         super(name, isBreakable);
         this.canMove = canMove;
         this.canFire = canFire;
