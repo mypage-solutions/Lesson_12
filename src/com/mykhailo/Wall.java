@@ -13,6 +13,6 @@ public class Wall extends Unit {
                 ", x=" + x +
                 ", y=" + y +
                 ", isBreakable=" + isBreakable +
-                "} " + super.toString();
+                "} ";
     }
 }

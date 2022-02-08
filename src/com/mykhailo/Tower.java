@@ -13,6 +13,6 @@ public class Tower extends Unit {
                 ", x=" + x +
                 ", y=" + y +
                 ", isBreakable=" + isBreakable +
-                "} " + super.toString();
+                "} ";
     }
 }

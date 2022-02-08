@@ -17,6 +17,6 @@ public class Tank extends Movable {
                 ", x=" + x +
                 ", y=" + y +
                 ", isBreakable=" + isBreakable +
-                "} " + super.toString();
+                "} ";
     }
 }
