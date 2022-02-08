@@ -1,11 +1,8 @@
 package com.mykhailo;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class UnitFactory {
-
-    private static final Random RANDOM = new Random();
 
     private final ArrayList<Unit> listOfUnits = new ArrayList<>();
 
