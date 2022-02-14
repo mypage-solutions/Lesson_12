@@ -19,7 +19,12 @@ Homework contains two topics:
 2. Reverse each words in string with capitalize the first letter.
 ## Technologies Used
 
-- Java.
+<p>
+<img src="https://github.com/mypage-solutions/Images/blob/main/Images/devicon/java-original.svg" width="35" height="35" /><span>&nbsp;&nbsp;</span>
+<img src="https://github.com/mypage-solutions/Images/blob/main/Images/devicon/intellij-original.svg" width="35" height="35" /><span>&nbsp;&nbsp;</span>
+<img src="https://github.com/mypage-solutions/Images/blob/main/Images/devicon/git-original.svg" width="35" height="35" /><span>&nbsp;&nbsp;</span>
+<img src="https://github.com/mypage-solutions/Images/blob/main/Images/devicon/github-original.svg" width="35" height="35" /><span>&nbsp;&nbsp;</span>
+</p>
 
 ## Project Status
 
